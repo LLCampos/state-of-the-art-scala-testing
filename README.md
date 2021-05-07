@@ -38,7 +38,7 @@ I encourage everyone to improve it through PRs! I really only have experience in
 - Easily share cats-effect's Resources between tests.
 - Errors appear at the very end of the run report, no matter how many suites were run.
 - Provides a lazy logger to enrich reporting with ad-hoc information, ensuring it only gets displayed when a test fails.
-- Integrate imperfectly with specs2.
+- Integrates with specs2.
 - Other native integrations: CE, ZIO, Monix, Scalacheck, Discipline.
 
 ## Comparison
