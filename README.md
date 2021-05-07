@@ -4,26 +4,32 @@ A rundown of current Scala testing libraries.
 
 I encourage everyone to improve it through PRs! I really only have experience in a couple of these libraries, so I might be missing or misrepresenting something.
 
-## Selling points for each library
+## Main points about each library
 
-### [Specs2](https://etorreborre.github.io/specs2/)
+
+### [ScalaTest](https://github.com/scalatest/scalatest)
+- ![GitHub stars](https://img.shields.io/github/stars/scalatest/scalatest)
+- The most popular Scala testing tool
+- Great flexibility in [testing styles](https://www.scalatest.org/user_guide/selecting_a_style)
+- Works with Java Code
+- Lots of features (TODO: List the more important ones)
+
+### [Specs2](https://github.com/etorreborre/specs2)
+- ![GitHub stars](https://img.shields.io/github/stars/etorreborre/specs2)
 - A lot of flexibility
 - A lot of features!
 - E.g. different styles of tests: Acceptance vs. Unit styles
   - Unit style is what we use normally (by default, no functional expectations)
   - Acceptance style separates between text and code (show example) (by default, functional expectations)
 
-### [ScalaTest](https://www.scalatest.org/)
-- The most popular Scala testing tool
-- Flexible: even works with Java Code
-- Great flexibility in [testing styles](https://www.scalatest.org/user_guide/selecting_a_style)
-- Also lot of features
 
 ### [µTest](https://github.com/com-lihaoyi/utest)
-- Claims to only have the minimum necessary
+- ![GitHub stars](https://img.shields.io/github/stars/com-lihaoyi/utest)
+- Claims to only have the minimum necessary (not a surprise, considered it was developed by Li Haoyi!)
 - Values uniformity over flexibility
 
 ### [MUnit](https://github.com/scalameta/munit)
+- ![GitHub stars](https://img.shields.io/github/stars/scalameta/munit)
 - Built on top of JUnit
 - Source locations for errors
 - Helpful diffs
@@ -31,6 +37,7 @@ I encourage everyone to improve it through PRs! I really only have experience in
 
 
 ### [Weaver Test](https://github.com/disneystreaming/weaver-test)
+- ![GitHub stars](https://img.shields.io/github/stars/disneystreaming/weaver-test)
 - Easily share resources between tests
 - More "functional style"
 - Native effects support
@@ -44,9 +51,8 @@ I encourage everyone to improve it through PRs! I really only have experience in
 
 ## Comparison
 
-|                            |       [ScalaTest](https://www.scalatest.org/)       |          [Specs2]()          |            [Weaver Test](https://github.com/disneystreaming/weaver-test)             | [µTest](https://github.com/com-lihaoyi/utest) |  [MUnit](https://github.com/scalameta/munit)  |
+|                            |       ScalaTest       |          Specs2          |            Weaver Test             | µTest |  MUnit  |
 | -------------------------- | :-------------------: | :----------------------: | :--------------------------------: | :---: | :-----: |
-| GitHub Stars               |          951          |           696            |                187                 |  438  |   207   |
 | Native support for effects |          No           |            No            |                Yes                 |  No   |   No    |
 | Functional tests           |          No           | Only in Acceptance style |                Yes                 |  No   |   No    |
 | Shared Resources           |          No           |            No            |                Yes                 |  No   |   No    |
