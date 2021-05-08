@@ -59,6 +59,7 @@ I encourage everyone to improve it through PRs! I really only have experience in
 | Scalacheck integration       |       Yes       |       Yes       |         Yes         |       No       |       Yes       |
 | Async tests²                 |       Yes       |       No        |         No          |      Yes       |       Yes       |
 | Native support for effects³  | No<sup>8</sup>  | No<sup>8</sup>  |   Yes<sup>9</sup>   | No<sup>8</sup> | No<sup>10</sup> |
+| Scala.js support             |       Yes       |       Yes       |         Yes         |      Yes       |       Yes       |
 
 1. Non-exception based.
 2. Supports test bodies that return a `Future[T]`.
