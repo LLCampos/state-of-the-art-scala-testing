@@ -43,21 +43,21 @@ I encourage everyone to improve it through PRs! I really only have experience in
 
 ## Comparison
 
-|                              |    ScalaTest    |     Specs2      |     Weaver Test      | µTest |      MUnit       |
-| ---------------------------- | :-------------: | :-------------: | :------------------: | :---: | :--------------: |
-| Test filtering               |       Yes       |       Yes       |         Yes          |  Yes  |       Yes        |
-| Nested tests                 |       Yes       |       Yes       |          No          |  Yes  |        No        |
-| Tagging                      |       Yes       |       Yes       | Limited.<sup>6</sup> |  No   |        No        |
-| Flexibility in test styles   |       YES       |    Somewhat     |          No          |  No   |        No        |
-| Error messages quality       |      Great      |       Ok        |        Great         |  Ok   |      Great       |
-| Choices of matchers          |      A lot      |      A lot      |       Limited        |  No   |     Limited      |
-| Parallelism                  | Yes<sup>4</sup> |       Yes       |         Yes          |  ???  |        No        |
-| Output flexibility           |       Yes       |       Yes       |          No          |  Yes  | Yes <sup>7</sup> |
-| Functional style¹            |       No        | Yes<sup>5</sup> |         Yes          |  No   |        No        |
-| Shared cats-effect Resources |       No        |       No        |         Yes          |  No   |        No        |
-| Scalacheck integration       |       Yes       |       Yes       |         Yes          |  No   |       Yes        |
-| Async tests²                 |       Yes       |       No        |          No          |  Yes  |       Yes        |
-| Native support for effects³  |       No        |       No        |         Yes          |  No   |        No        |
+|                              |    ScalaTest    |     Specs2      |     Weaver Test     | µTest |      MUnit      |
+| ---------------------------- | :-------------: | :-------------: | :-----------------: | :---: | :-------------: |
+| Test filtering               |       Yes       |       Yes       |         Yes         |  Yes  |       Yes       |
+| Nested tests                 |       Yes       |       Yes       |         No          |  Yes  |       No        |
+| Tagging                      |       Yes       |       Yes       | Limited<sup>6</sup> |  No   |       No        |
+| Flexibility in test styles   |       YES       |    Somewhat     |         No          |  No   |       No        |
+| Error messages quality       |      Great      |       Ok        |        Great        |  Ok   |      Great      |
+| Choices of matchers          |      A lot      |      A lot      |       Limited       |  No   |     Limited     |
+| Parallelism                  | Yes<sup>4</sup> |       Yes       |         Yes         |  ???  |       No        |
+| Output flexibility           |       Yes       |       Yes       |         No          |  Yes  | Yes<sup>7</sup> |
+| Functional style¹            |       No        | Yes<sup>5</sup> |         Yes         |  No   |       No        |
+| Shared cats-effect Resources |       No        |       No        |         Yes         |  No   |       No        |
+| Scalacheck integration       |       Yes       |       Yes       |         Yes         |  No   |       Yes       |
+| Async tests²                 |       Yes       |       No        |         No          |  Yes  |       Yes       |
+| Native support for effects³  |       No        |       No        |         Yes         |  No   |       No        |
 
 1. Non-exception based.
 2. Supports test bodies that return a `Future[T]`.
