@@ -10,7 +10,7 @@ I encourage everyone to improve it through PRs! I really only have experience in
 | -------------------------------- | :-------------: | :-------------: | :-----------------: | :------------: | :-------------: |
 | **Test filtering**               |       Yes       |       Yes       |         Yes         |      Yes       |       Yes       |
 | **Nested tests**                 |       Yes       |       Yes       |         No          |      Yes       |       No        |
-| **Tagging**                      |       Yes       |       Yes       | Limited<sup>6</sup> |       No       |       No        |
+| **Tagging**                      |       Yes       |       Yes       | Limited<sup>6</sup> |       No       |       Yesha       |
 | **Flexibility in test styles**   |       YES       |    Somewhat     |         No          |       No       |       No        |
 | **Error messages quality**       |      Great      |       Ok        |        Great        |       Ok       |      Great      |
 | **Choices of matchers**          |      A lot      |      A lot      |       Limited       |       No       |     Limited     |
