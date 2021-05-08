@@ -4,6 +4,37 @@ A rundown of current Scala testing libraries.
 
 I encourage everyone to improve it through PRs! I really only have experience in a couple of these libraries, so I might be missing or misrepresenting something.
 
+## Comparison
+
+|                                  |    ScalaTest    |     Specs2      |     Weaver Test     |     µTest      |      MUnit      |
+| -------------------------------- | :-------------: | :-------------: | :-----------------: | :------------: | :-------------: |
+| **Test filtering**               |       Yes       |       Yes       |         Yes         |      Yes       |       Yes       |
+| **Nested tests**                 |       Yes       |       Yes       |         No          |      Yes       |       No        |
+| **Tagging**                      |       Yes       |       Yes       | Limited<sup>6</sup> |       No       |       No        |
+| **Flexibility in test styles**   |       YES       |    Somewhat     |         No          |       No       |       No        |
+| **Error messages quality**       |      Great      |       Ok        |        Great        |       Ok       |      Great      |
+| **Choices of matchers**          |      A lot      |      A lot      |       Limited       |       No       |     Limited     |
+| **Parallelism within suite**     | Yes<sup>4</sup> |       Yes       |         Yes         |      ???       |       No        |
+| **Parallelism across suites**    |       Yes       |       Yes       |         Yes         |      Yes       |       Yes       |
+| **Output flexibility**           |       Yes       |       Yes       |         No          |      Yes       | Yes<sup>7</sup> |
+| **Functional style**¹            |       No        | Yes<sup>5</sup> |         Yes         |       No       |       No        |
+| **Shared cats-effect Resources** |       No        |       No        |         Yes         |       No       |       No        |
+| **Scalacheck integration**       |       Yes       |       Yes       |         Yes         |       No       |       Yes       |
+| **Async tests**²                 |       Yes       |       No        |         No          |      Yes       |       Yes       |
+| **Native support for effects**³  | No<sup>8</sup>  | No<sup>8</sup>  |   Yes<sup>9</sup>   | No<sup>8</sup> | No<sup>10</sup> |
+| **Scala.js support**             |       Yes       |       Yes       |         Yes         |      Yes       |       Yes       |
+
+1. Non-exception based.
+2. Supports test bodies that return a `Future[T]`.
+3. Supports test bodies that return an effect, e.g. cats-effect's `IO`.
+4. Not the default.
+5. Only in Acceptance style.
+6. `ignored` and `cancelled`.
+7. Through JUnit.
+8. For `cats-effect`, supported through [cats-effect-testing](https://github.com/typelevel/cats-effect-testing).
+9. `cats-effect`, `Monix`, `Monix BIO`, `ZIO` 
+10. For `cats-effect`, supported through [munit-cats-effect](https://github.com/typelevel/munit-cats-effect).
+
 ## Main points about each library
 
 ### [ScalaTest](https://github.com/scalatest/scalatest)
@@ -40,37 +71,6 @@ I encourage everyone to improve it through PRs! I really only have experience in
 - Provides a lazy logger to enrich reporting with ad-hoc information, ensuring it only gets displayed when a test fails.
 - Integrates with specs2.
 - Other native integrations: CE, ZIO, Monix, Scalacheck, Discipline.
-
-## Comparison
-
-|                                  |    ScalaTest    |     Specs2      |     Weaver Test     |     µTest      |      MUnit      |
-| -------------------------------- | :-------------: | :-------------: | :-----------------: | :------------: | :-------------: |
-| **Test filtering**               |       Yes       |       Yes       |         Yes         |      Yes       |       Yes       |
-| **Nested tests**                 |       Yes       |       Yes       |         No          |      Yes       |       No        |
-| **Tagging**                      |       Yes       |       Yes       | Limited<sup>6</sup> |       No       |       No        |
-| **Flexibility in test styles**   |       YES       |    Somewhat     |         No          |       No       |       No        |
-| **Error messages quality**       |      Great      |       Ok        |        Great        |       Ok       |      Great      |
-| **Choices of matchers**          |      A lot      |      A lot      |       Limited       |       No       |     Limited     |
-| **Parallelism within suite**     | Yes<sup>4</sup> |       Yes       |         Yes         |      ???       |       No        |
-| **Parallelism across suites**    |       Yes       |       Yes       |         Yes         |      Yes       |       Yes       |
-| **Output flexibility**           |       Yes       |       Yes       |         No          |      Yes       | Yes<sup>7</sup> |
-| **Functional style**¹            |       No        | Yes<sup>5</sup> |         Yes         |       No       |       No        |
-| **Shared cats-effect Resources** |       No        |       No        |         Yes         |       No       |       No        |
-| **Scalacheck integration**       |       Yes       |       Yes       |         Yes         |       No       |       Yes       |
-| **Async tests**²                 |       Yes       |       No        |         No          |      Yes       |       Yes       |
-| **Native support for effects**³  | No<sup>8</sup>  | No<sup>8</sup>  |   Yes<sup>9</sup>   | No<sup>8</sup> | No<sup>10</sup> |
-| **Scala.js support**             |       Yes       |       Yes       |         Yes         |      Yes       |       Yes       |
-
-1. Non-exception based.
-2. Supports test bodies that return a `Future[T]`.
-3. Supports test bodies that return an effect, e.g. cats-effect's `IO`.
-4. Not the default.
-5. Only in Acceptance style.
-6. `ignored` and `cancelled`.
-7. Through JUnit.
-8. For `cats-effect`, supported through [cats-effect-testing](https://github.com/typelevel/cats-effect-testing).
-9. `cats-effect`, `Monix`, `Monix BIO`, `ZIO` 
-10. For `cats-effect`, supported through [munit-cats-effect](https://github.com/typelevel/munit-cats-effect).
 
 ## Extras
 - [Cats Effect Testing](https://github.com/typelevel/cats-effect-testing) - Integration between cats-effect and test frameworks.
