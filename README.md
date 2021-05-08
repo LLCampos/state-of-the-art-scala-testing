@@ -51,7 +51,8 @@ I encourage everyone to improve it through PRs! I really only have experience in
 | Flexibility in test styles   |       YES       |    Somewhat     |         No          |       No       |       No        |
 | Error messages quality       |      Great      |       Ok        |        Great        |       Ok       |      Great      |
 | Choices of matchers          |      A lot      |      A lot      |       Limited       |       No       |     Limited     |
-| Parallelism                  | Yes<sup>4</sup> |       Yes       |         Yes         |      ???       |       No        |
+| Parallelism within suite     | Yes<sup>4</sup> |       Yes       |         Yes         |      ???       |       No        |
+| Parallelism across suites    |       Yes       |       Yes       |         Yes         |      Yes       |       Yes       |
 | Output flexibility           |       Yes       |       Yes       |         No          |      Yes       | Yes<sup>7</sup> |
 | Functional style¹            |       No        | Yes<sup>5</sup> |         Yes         |       No       |       No        |
 | Shared cats-effect Resources |       No        |       No        |         Yes         |       No       |       No        |
