@@ -20,7 +20,7 @@ PRs with improvements and fixes are encouraged. As you can see by the `???`s in 
 | **Functional style**¹            |       No        | Yes<sup>5</sup> |         Yes         |       No       |       No        |             No              |
 | **Shared cats-effect Resources** |       No        |       No        |         Yes         |       No       |       No        |             No              |
 | **Scalacheck integration**       |       Yes       |       Yes       |         Yes         |       No       |       Yes       |             ???             |
-| **Async tests**²                 |       Yes       |       No        |         No          |      Yes       |       Yes       |             No              |
+| **Async tests**²                 |       Yes       |       Yes        |         No          |      Yes       |       Yes       |             No              |
 | **Native support for effects**³  | No<sup>8</sup>  | No<sup>8</sup>  |   Yes<sup>9</sup>   | No<sup>8</sup> | No<sup>10</sup> |             No              |
 | **Scala.js support**             |       Yes       |       Yes       |         Yes         |      Yes       |       Yes       |             Yes             |
 
